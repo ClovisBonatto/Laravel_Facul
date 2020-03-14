@@ -17,4 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Route::get('/categorias', 'CategoryControle@index')-> name('categories.index');
+
+Route::resource('categories', 'CategoryController');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/minharota', function(){
+    return '#VoltaTemer';
+});
